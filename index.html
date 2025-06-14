@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viva Paleteria - Sabor que te abraça!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="lojas.html">Nossas Lojas</a> <a href="sobre.html">Sobre</a>
+</nav>
+
+<main>
+    <header class="hero-section">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Sabor que te abraça.</h1>
+            <p>Há 10 anos em Brasília, transformando frutas frescas na mais pura felicidade.</p>
+            <a href="cardapio.html" class="hero-button">VER SABORES E FAZER PEDIDO</a>
+        </div>
+    </header>
+
+    <section class="order-section" data-aos="fade-up">
+        <div class="container">
+            <h2>Peça agora a sua Viva Paleteria!</h2>
+            <div class="order-buttons">
+                <a href="#" class="order-button ifood">
+                    <i class="fa-solid fa-motorcycle"></i> PEDIR NO IFOOD
+                </a>
+                <a href="#" class="order-button goomer">
+                    <i class="fa-solid fa-rocket"></i> PEDIR NO GOOMER GO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <div class="container" data-aos="fade-up">
+            <h2>Um sabor para cada momento</h2>
+            <div class="category-grid">
+                <a href="cardapio.html#recheadas" class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="placeholder-recheada.jpg" alt="Paleta recheada">
+                    <h3>Recheadas</h3>
+                </a>
+                <a href="cardapio.html#cremosas" class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="placeholder-cremosa.jpg" alt="Paleta cremosa">
+                    <h3>Cremosas</h3>
+                </a>
+                <a href="cardapio.html#frutadas" class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="placeholder-frutada.jpg" alt="Paleta de fruta">
+                    <h3>Frutadas</h3>
+                </a>
+                <a href="cardapio.html#especiais" class="category-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="placeholder-especial.jpg" alt="Paleta especial">
+                    <h3>Especiais</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stores-section">
+        <div class="container side-by-side" data-aos="fade-up">
+            <div class="text-content">
+                <h2>Passe em uma de nossas lojas!</h2>
+                <p>Temos um cantinho especial esperando por você. Venha nos visitar, conhecer nossos produtos e tomar sua paleta favorita feita na hora.</p>
+                <a href="lojas.html" class="cta-button">VER TODOS OS ENDEREÇOS</a>
+            </div>
+            <div class="image-content">
+                <img src="placeholder-loja.jpg" alt="Fachada de uma das lojas da Viva Paleteria">
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container side-by-side reverse" data-aos="fade-up">
+            <div class="text-content">
+                <h2>De Brasília para o seu coração</h2>
+                <p>Nascemos do sonho de 3 irmãos apaixonados por sabores autênticos. Hoje, somos parte da história da cidade, com o compromisso de oferecer qualidade e carinho em cada paleta.</p>
+                <a href="sobre.html" class="cta-button">CONHEÇA NOSSA HISTÓRIA</a>
+            </div>
+            <div class="image-content">
+                <img src="placeholder-historia.jpg" alt="Imagem que representa a história da Viva Paleteria, como o fusca ou os fundadores">
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-column about">
+            <img src="logo-viva-paleteria-branco.png" alt="Logo Viva Paleteria" class="footer-logo">
+            <div class="social-links">
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-column links">
+            <h4>Institucional</h4>
+            <ul>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="#">Trabalhe com a gente</a></li>
+                <li><a href="#">Tabela Nutricional</a></li>
+            </ul>
+        </div>
+        <div class="footer-column links">
+            <h4>Suporte</h4>
+            <ul>
+                <li><a href="#">Central de Atendimento</a></li>
+                <li><a href="#">Sugestões e Reclamações</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Viva Paleteria. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+</script>
+</body>
+</html>
