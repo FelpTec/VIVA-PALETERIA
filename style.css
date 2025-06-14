@@ -247,6 +247,7 @@ body.pagina-sobre {
 
 .sobre-section .texto h2 {
     border: 2px solid white;
+    color: white;
     padding: 10px;
     display: inline-block;
     border-radius: 8px;
@@ -259,6 +260,7 @@ body.pagina-sobre {
     font-size: 18px;
     line-height: 1.6;
     opacity: 0.85;
+    color: white;
 }
 
 .carrossel {
@@ -366,7 +368,7 @@ ESTILOS DA PÁGINA INICIAL (INDEX.HTML) E COMPONENTES GLOBAIS
     position: relative;
     padding: 20px;
     /* IMAGEM DE FUNDO - Substitua pelo link da sua melhor foto! */
-    background: url('https://images.unsplash.com/photo-1563805042-76-242286575933?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    background: url('img/viva/vans-estacionadas.png') no-repeat center center/cover;
 }
 
 .hero-section::after {
@@ -464,12 +466,14 @@ ESTILOS DA PÁGINA INICIAL (INDEX.HTML) E COMPONENTES GLOBAIS
 .categories-section {
     padding: 80px 0;
     text-align: center;
+    background: #E91E63;
 }
 
 .categories-section h2 {
     font-family: 'Merriweather', serif;
     font-size: 2.5rem;
     margin-bottom: 50px;
+    color: white;
 }
 
 .category-grid {
@@ -681,7 +685,7 @@ ESTILOS DA GALERIA INTERATIVA (PÁGINA SABORES)
 
 /*
 =================================================================
-ESTILOS DA PÁGINA DE LOJAS (lojas.html)
+ESTILOS DA PÁGINA DE LOJAS (lojas.html) - VERSÃO COM FUNDO ROSA
 =================================================================
 */
 
@@ -701,33 +705,44 @@ ESTILOS DA PÁGINA DE LOJAS (lojas.html)
     margin-bottom: 40px;
 }
 
-/* Menu de navegação das regiões */
+/* NOVO: A faixa rosa que vai de ponta a ponta */
+.regioes-banner {
+    background-color: #E91E63; /* A COR PRINCIPAL */
+    padding: 50px 0; /* Espaçamento interno vertical */
+    margin: 40px 0;
+}
+
+/* Menu de navegação das regiões - AJUSTADO para ficar dentro da faixa */
 .regioes-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px; /* Aumentei um pouco o espaçamento */
-    margin: 40px auto;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #eee;
-    max-width: 1000px; /* Limita a largura do menu de botões */
+    gap: 15px;
+    /* Removemos margem e borda, pois o .regioes-banner agora cuida disso */
+    margin: 0 auto;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
+/* Botões com estilo invertido para o fundo rosa */
 .regioes-nav a {
     text-decoration: none;
-    background-color: #f1f1f1;
-    color: #555;
-    padding: 8px 15px;
-    border-radius: 20px;
+    background-color: #ffffff; /* Fundo branco para contrastar com o rosa */
+    border: 1px solid #ffffff; /* Borda branca */
+    color: #E91E63; /* Texto na cor rosa */
+    padding: 10px 20px;
+    border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Efeito Hover Invertido */
 .regioes-nav a:hover {
-    background-color: #E91E63;
-    color: white;
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.85); /* Fica levemente transparente */
+    color: #a71045; /* Rosa um pouco mais escuro */
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Seção de cada região */
