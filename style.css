@@ -53,10 +53,80 @@ nav a:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
+/*
+=================================================================
+ESTILOS DA LOGO E AJUSTES DE NAVEGAÇÃO
+=================================================================
+*/
+
+/* Remove a estilização antiga da nav e usa a nova */
+nav {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    text-align: left;
+}
+
+.main-nav {
+    background: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 45px; /* Ajuste a altura da logo na nav conforme necessário */
+    display: block;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #E91E63;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem; /* Ajustei um pouco o tamanho */
+    transition: color 0.3s;
+}
+.nav-links a:last-child {
+    margin-right: 0;
+}
+
+.nav-links a:hover {
+    color: #2FB6A2;
+}
+
+
+/* Estilo da Logo na Seção Hero */
+.hero-logo {
+    max-width: 200px; /* Ajuste o tamanho da logo no hero */
+    margin-bottom: 25px;
+}
+
+/* Ajuste no rodapé (já deve existir, mas confirme) */
+.footer-column.about .footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para o menu em telas pequenas (Menu Hambúrguer - futuro) */
+@media (max-width: 768px) {
+    .nav-links a {
+        font-size: 1rem;
+        margin: 0 8px;
+    }
+}
 
 /* --- ESTILOS DA PÁGINA: CARDÁPIO --- */
 
-.titulo-cardapio {
+.titulo-sabores { /* CLASSE ATUALIZADA */
     text-align: center;
     color: white;
     font-family: 'Merriweather', serif;
@@ -77,10 +147,10 @@ nav a:hover {
 }
 
 /* Define as cores de fundo por ID */
-#recheadas { background-color: #E91E63; }
+#recheadas { background-color: #5F4B8B; }
 #cremosas  { background-color: #FCE96A; }
-#frutadas  { background-color: #2FB6A2; }
-#especiais { background-color: #5F4B8B; }
+#frutadas  { background-color: #E91E63; }
+#especiais { background-color: #2FB6A2; }
 
 /* As categorias com fundo claro precisam de texto escuro */
 #cremosas h2, #cremosas ul {
@@ -153,6 +223,10 @@ nav a:hover {
     opacity: 0.8;
     text-align: center;
     color: white;
+}
+
+body.pagina-sobre {
+    background-color: #E91E63;
 }
 
 .sobre-section {
@@ -452,7 +526,7 @@ ESTILOS DA PÁGINA INICIAL (INDEX.HTML) E COMPONENTES GLOBAIS
 /* --- RODAPÉ (COMPONENTE GLOBAL) --- */
 
 .site-footer {
-    background-color: #5F4B8B;
+    background-color: #E91E63;
     color: white;
     padding: 60px 0 0 0;
 }
@@ -550,5 +624,214 @@ ESTILOS DA PÁGINA INICIAL (INDEX.HTML) E COMPONENTES GLOBAIS
     }
     .social-links {
         margin-bottom: 30px;
+    }
+}
+
+/*
+=================================================================
+ESTILOS DA GALERIA INTERATIVA (PÁGINA SABORES)
+=================================================================
+*/
+
+/* Removemos o estilo antigo das imagens para dar espaço a uma só */
+.categoria-paleta .coluna-imagens {
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-categoria-principal {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease;
+}
+
+/* Estilo para a lista interativa */
+.lista-sabores-interativa {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.lista-sabores-interativa li {
+    font-size: 1.4rem;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid transparent;
+}
+
+/* Efeito de hover na lista */
+.lista-sabores-interativa li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ajustes de cor para a seção 'cremosas' que tem fundo claro */
+#cremosas .lista-sabores-interativa li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+=================================================================
+ESTILOS DA PÁGINA DE LOJAS (lojas.html)
+=================================================================
+*/
+
+.titulo-paginas {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitulo-paginas {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Menu de navegação das regiões */
+.regioes-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; /* Aumentei um pouco o espaçamento */
+    margin: 40px auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    max-width: 1000px; /* Limita a largura do menu de botões */
+}
+
+.regioes-nav a {
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.regioes-nav a:hover {
+    background-color: #E91E63;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Seção de cada região */
+.regiao-lojas {
+    /* AUMENTADO para mais espaço superior */
+    padding: 80px 0 40px 0;
+}
+
+.regiao-lojas h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px; /* Aumentei a margem inferior */
+    border-bottom: 2px solid #E91E63;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Grid que segura os cards das lojas */
+.lojas-grid {
+    display: grid;
+    /* Responsividade aprimorada para caber mais cards */
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 25px;
+}
+
+.loja-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.loja-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.loja-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.loja-card .endereco {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.loja-card .horario {
+    color: #E91E63;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.loja-card .horario .fa-clock {
+    margin-right: 8px;
+}
+
+.loja-card .maps-link {
+    text-decoration: none;
+    color: #E91E63;
+    font-weight: bold;
+    align-self: flex-start;
+}
+.loja-card .maps-link:hover {
+    text-decoration: underline;
+}
+.loja-card .maps-link .fa-arrow-right {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+.loja-card:hover .maps-link .fa-arrow-right {
+    transform: translateX(5px);
+}
+
+/* ================================================= */
+/* ADIÇÃO NA SESSÃO DE RESPONSIVIDADE PARA CELULARES */
+/* (dentro de @media (max-width: 768px))           */
+/* ================================================= */
+@media (max-width: 768px) {
+    /* ... Seus estilos responsivos existentes aqui ... */
+
+    /* NOVO: Ajustes para a página de lojas */
+    .titulo-paginas {
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }
+    .subtitulo-paginas {
+        font-size: 1rem;
+    }
+    .regiao-lojas {
+        padding: 50px 0 20px 0;
+    }
+    .regiao-lojas h2 {
+        font-size: 2rem;
+    }
+    .lojas-grid {
+        grid-template-columns: 1fr; /* Força uma coluna única no mobile */
     }
 }

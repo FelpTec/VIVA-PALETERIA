@@ -6,36 +6,44 @@
     <title>Viva Paleteria - Sabor que te abraça!</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" href="img/logo_viva_rosa.png" type="image/png">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Início</a>
-    <a href="cardapio.html">Cardápio</a>
-    <a href="lojas.html">Nossas Lojas</a> <a href="sobre.html">Sobre</a>
+<nav class="main-nav">
+    <div class="container nav-container">
+        <a href="index.html" class="nav-logo-link">
+            <img src="img/logo_viva_rosa.png" alt="Viva Paleteria Logo" class="nav-logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Início</a>
+            <a href="sabores.html">Sabores</a>
+            <a href="lojas.html">Nossas Lojas</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </div>
 </nav>
 
 <main>
     <header class="hero-section">
         <div class="hero-content" data-aos="fade-up">
+            <img src="img/logo_viva_branca.png" alt="Viva Paleteria Logo" class="hero-logo">
             <h1>Sabor que te abraça.</h1>
             <p>Há 10 anos em Brasília, transformando frutas frescas na mais pura felicidade.</p>
-            <a href="cardapio.html" class="hero-button">VER SABORES E FAZER PEDIDO</a>
+            <a href="sabores.html" class="hero-button">VER SABORES E FAZER PEDIDO</a>
         </div>
     </header>
 
     <section class="order-section" data-aos="fade-up">
         <div class="container">
-            <h2>Peça agora a sua Viva Paleteria!</h2>
+            <h2>Peça agora a sua Paleta do Viva!</h2>
             <div class="order-buttons">
-                <a href="#" class="order-button ifood">
+                <a href="https://linktr.ee/vivaifood" class="order-button ifood">
                     <i class="fa-solid fa-motorcycle"></i> PEDIR NO IFOOD
                 </a>
-                <a href="#" class="order-button goomer">
+                <a href="https://viva-paleteria.goomer.app/menu" class="order-button goomer">
                     <i class="fa-solid fa-rocket"></i> PEDIR NO GOOMER GO
                 </a>
             </div>
@@ -46,19 +54,19 @@
         <div class="container" data-aos="fade-up">
             <h2>Um sabor para cada momento</h2>
             <div class="category-grid">
-                <a href="cardapio.html#recheadas" class="category-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="placeholder-recheada.jpg" alt="Paleta recheada">
+                <a href="sabores.html#recheadas" class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/sabores/recheadas-default.png" alt="Paleta recheada">
                     <h3>Recheadas</h3>
                 </a>
-                <a href="cardapio.html#cremosas" class="category-card" data-aos="fade-up" data-aos-delay="200">
+                <a href="sabores.html#cremosas" class="category-card" data-aos="fade-up" data-aos-delay="200">
                     <img src="placeholder-cremosa.jpg" alt="Paleta cremosa">
                     <h3>Cremosas</h3>
                 </a>
-                <a href="cardapio.html#frutadas" class="category-card" data-aos="fade-up" data-aos-delay="300">
+                <a href="sabores.html#frutadas" class="category-card" data-aos="fade-up" data-aos-delay="300">
                     <img src="placeholder-frutada.jpg" alt="Paleta de fruta">
                     <h3>Frutadas</h3>
                 </a>
-                <a href="cardapio.html#especiais" class="category-card" data-aos="fade-up" data-aos-delay="400">
+                <a href="sabores.html#especiais" class="category-card" data-aos="fade-up" data-aos-delay="400">
                     <img src="placeholder-especial.jpg" alt="Paleta especial">
                     <h3>Especiais</h3>
                 </a>
@@ -91,13 +99,12 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <footer class="site-footer">
     <div class="container footer-grid">
         <div class="footer-column about">
-            <img src="logo-viva-paleteria-branco.png" alt="Logo Viva Paleteria" class="footer-logo">
+            <img src="img/logo_viva_branca.png" alt="Viva Paleteria Logo" class="footer-logo">
             <div class="social-links">
                 <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
