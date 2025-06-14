@@ -1,0 +1,227 @@
+/* --- ESTILOS GERAIS E FONTES --- */
+/* Importa as fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;600&display=swap');
+
+/* Reset básico e estilos do corpo */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0; /* Cor de fundo padrão */
+    scroll-behavior: smooth;
+    color: #333; /* Cor de texto padrão */
+}
+
+/* --- ESTILOS COMPARTILHADOS (NAV, TÍTULOS) --- */
+
+/* Barra de Navegação */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    color: #E91E63;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2FB6A2;
+    text-decoration: none;
+}
+
+/* Efeito de hover para imagens */
+.rotate-hover {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 10px;
+    border: 4px solid white;
+}
+.rotate-hover:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+
+/* --- ESTILOS DA PÁGINA: CARDÁPIO --- */
+
+.titulo-cardapio {
+    text-align: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    padding: 40px 0 20px 0;
+    background-color: #E91E63; /* Cor principal da marca */
+    margin: 0;
+}
+
+/* Estrutura principal de cada categoria de paleta */
+.categoria-paleta {
+    min-height: 90vh;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Define as cores de fundo por ID */
+#recheadas { background-color: #E91E63; }
+#cremosas  { background-color: #FCE96A; }
+#frutadas  { background-color: #2FB6A2; }
+#especiais { background-color: #5F4B8B; }
+
+/* As categorias com fundo claro precisam de texto escuro */
+#cremosas h2, #cremosas ul {
+    color: #5F4B8B;
+}
+
+/* Container flex que segura as colunas de texto e imagem */
+.categoria-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas pequenas */
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Colunas de texto e imagem */
+.coluna-texto, .coluna-imagens {
+    flex: 1;
+    min-width: 320px; /* Largura mínima antes de quebrar a linha */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna-imagens {
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.coluna-imagens img {
+    max-width: 250px;
+    width: 45%; /* Ocupa no máximo 45% da coluna, permitindo 2 lado a lado */
+    height: auto;
+}
+
+.coluna-texto h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.coluna-texto ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem; /* Tamanho mais legível */
+    line-height: 1.8;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.coluna-texto p {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+
+/* --- ESTILOS DA PÁGINA: SOBRE --- */
+
+.titulo-sobre {
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    margin: 60px auto 40px;
+    opacity: 0.8;
+    text-align: center;
+    color: white;
+}
+
+.sobre-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-section .texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-section .texto h2 {
+    border: 2px solid white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 2rem;
+    margin-top: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.sobre-section .texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.carrossel {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.carrossel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carrossel img.ativo {
+    opacity: 1;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
+
+@media (max-width: 768px) {
+    /* Ajustes gerais para mobile */
+    nav a { font-size: 1rem; margin: 0 8px; }
+
+    /* Ajustes Cardápio */
+    .titulo-cardapio { font-size: 2.5rem; }
+    .coluna-texto h2 { font-size: 3rem; }
+
+    /* Ajustes Sobre */
+    .titulo-sobre { font-size: 2.5rem; }
+    .sobre-section { flex-direction: column; padding: 20px; }
+    .carrossel { height: 300px; width: 100%; }
+}

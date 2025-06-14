@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre - Viva Paleteria</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background-color: #E91E63;">
+
+<h1 class="titulo-sobre">Sobre a Viva</h1>
+
+<main>
+    <section class="sobre-section">
+        <div class="texto">
+            <h2>Nossa História</h2>
+            <p>
+                A Viva Paleteria nasceu em Brasília há 10 anos, a partir do sonho de três irmãos apaixonados por sabores autênticos e momentos em família. Inspirados nas tradicionais paletas mexicanas, eles decidiram criar uma marca que unisse qualidade artesanal, ingredientes frescos e uma experiência única para o público brasiliense. <br><br>
+                Desde então, a marca cresceu e se fortaleceu, conquistando espaço na capital com um cardápio criativo, atendimento acolhedor e o compromisso de oferecer sempre o melhor em cada mordida.
+            </p>
+        </div>
+
+        <div class="carrossel">
+            <img src="/about/Captura de tela 2025-06-13 004418.png" alt="Kombi da Viva Paleteria em frente à Torre de TV de Brasília" class="ativo" />
+            <img src="/about/Captura de tela 2025-06-13 003637.png" alt="Caixa de isopor personalizada com paletas"  />
+            <img src="/about/Captura de tela 2025-06-13 002700.png" alt="Fusca plotado da Viva Paleteria" />
+            <img src="/about/Captura de tela 2025-06-13 003552.png" alt="Criança sorrindo enquanto segura uma paleta" />
+        </div>
+    </section>
+
+    <section class="sobre-section">
+        <div class="carrossel">
+            <img src="/about/Captura de tela 2025-06-13 002641.png" alt="Detalhe de uma paleta de morango sendo preparada" class="ativo"/>
+            <img src="/about/Captura de tela 2025-06-13 003126.png" alt="Paletas de frutas coloridas alinhadas"  />
+            <img src="/img/Captura de tela 2025-06-12 172944.png" alt="Paleta de uva em destaque" />
+        </div>
+
+        <div class="texto">
+            <h2>Compromisso com a Qualidade</h2>
+            <p>
+                Na Viva Paleteria, qualidade é mais que um diferencial — é a nossa essência. Cada paleta é feita com os melhores ingredientes, selecionados com rigor para garantir sabor e frescor em cada mordida. Utilizamos frutas frescas, ingredientes originais e sem corantes artificiais. <br><br>
+                Nossos recheios cremosos e combinações exclusivas são produzidos artesanalmente, sempre com muito cuidado. Trabalhamos com fornecedores de confiança e buscamos constantemente inovações que mantenham o sabor autêntico e natural de cada receita. Porque acreditamos que um bom sorvete começa pela escolha do que vai dentro dele.
+            </p>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const carrosseis = document.querySelectorAll('.carrossel');
+
+        carrosseis.forEach(carrossel => {
+            const imagens = carrossel.querySelectorAll('img');
+            if (imagens.length > 1) { // Só ativa o carrossel se tiver mais de uma imagem
+                let index = 0;
+                setInterval(() => {
+                    imagens[index].classList.remove('ativo');
+                    index = (index + 1) % imagens.length;
+                    imagens[index].classList.add('ativo');
+                }, 3000);
+            }
+        });
+    });
+</script>
+</body>
+</html>
